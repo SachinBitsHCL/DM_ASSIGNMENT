@@ -2,7 +2,7 @@
 
 Student ID: 2025AG05794
 Name : Sachin Vaghela
-Git Hub Repo : https://github.com/SachinBitsHCL/DM
+Git Hub Repo : https://github.com/SachinBitsHCL/DM_ASSIGNMENT
 Date: 14 November 2024  
 Project: End-to-End Recommendation Pipeline for Amazon E-commerce
 
