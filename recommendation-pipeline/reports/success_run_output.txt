@@ -1,0 +1,23 @@
+﻿Recommendation Pipeline Run - Successful
+
+Validation summary:
+{
+  "total_users": 120,
+  "total_items": 80,
+  "total_interactions": 5998,
+  "invalid_rows_logged": 6000,
+  "errors": [
+    {
+      "dataset": "interactions",
+      "column": "user_id,item_id,timestamp",
+      "reason": "duplicate_rows",
+      "count": 4
+    }
+  ],
+  "status": "warnings_detected"
+}
+
+Model comparison:
+model,precision@k,recall@k,ndcg@k,coverage,diversity
+Popularity,0.12000000000000001,0.06187164687164686,0.11614354207027025,0.2,0.7816666666666667
+SVD,0.11999999999999998,0.06024305895629425,0.12414114522960885,1.0,0.8408333333333334

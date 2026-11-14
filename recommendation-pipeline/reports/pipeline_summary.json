@@ -1,0 +1,41 @@
+{
+  "validation_report": {
+    "total_users": 120,
+    "total_items": 80,
+    "total_interactions": 5998,
+    "invalid_rows_logged": 2,
+    "errors": [
+      {
+        "dataset": "interactions",
+        "column": "user_id,item_id,timestamp",
+        "reason": "duplicate_rows",
+        "count": 2
+      }
+    ],
+    "status": "warnings_detected"
+  },
+  "metrics": [
+    {
+      "model": "Popularity",
+      "precision@k": 0.12000000000000001,
+      "recall@k": 0.06187164687164686,
+      "ndcg@k": 0.11614354207027025,
+      "coverage": 0.2,
+      "diversity": 0.7816666666666667
+    },
+    {
+      "model": "SVD",
+      "precision@k": 0.11999999999999998,
+      "recall@k": 0.06024305895629425,
+      "ndcg@k": 0.12414114522960885,
+      "coverage": 1.0,
+      "diversity": 0.8408333333333334
+    }
+  ],
+  "feature_store": {
+    "user_features": "     user_id country  ... user_average_rating  last_interaction\n0          1      US  ...            4.968478        2024-12-28\n1          2      IN  ...            5.000000        2024-12-27\n2          3      IN  ...            5.000000        2024-11-27\n3          4      DE  ...            4.991864        2024-12-30\n4          5      DE  ...            4.957879        2024-12-19\n..       ...     ...  ...                 ...               ...\n115      116      DE  ...            4.984909        2024-12-23\n116      117      US  ...            5.000000        2024-12-30\n117      118      US  ...            5.000000        2024-10-30\n118      119      UK  ...            4.932353        2024-12-08\n119      120      US  ...            4.920208        2024-12-11\n\n[120 rows x 6 columns]",
+    "item_features": "    item_id     category  ...  item_popularity_count item_average_rating\n0         1         Home  ...                     83            4.989157\n1         2       Beauty  ...                     67            4.916119\n2         3      Fashion  ...                     72            4.919306\n3         4         Home  ...                     73            5.000000\n4         5       Sports  ...                     87            5.000000\n..      ...          ...  ...                    ...                 ...\n75       76  Electronics  ...                     67            4.922687\n76       77         Home  ...                     67            4.813881\n77       78  Electronics  ...                     66            4.642727\n78       79         Home  ...                     68            4.933971\n79       80       Sports  ...                     95            5.000000\n\n[80 rows x 6 columns]",
+    "interaction_features": "      user_id  item_id  ...  item_average_rating days_since_last_interaction\n0         116       40  ...             5.000000                         691\n1          97       26  ...             4.975352                         699\n2          86       51  ...             4.840745                         701\n3         106       65  ...             5.000000                         686\n4          34       34  ...             4.935422                         691\n...       ...      ...  ...                  ...                         ...\n5993       65       13  ...             4.929104                         684\n5994       64       14  ...             4.997024                         684\n5995       61       26  ...             4.975352                         684\n5996       54       36  ...             5.000000                         684\n5997      103        3  ...             4.919306                         684\n\n[5998 rows x 11 columns]",
+    "feature_catalog": "  feature_group  ...                                        description\n0          user  ...                  Average rating given by the user.\n1          user  ...               Number of interactions for the user.\n2          user  ...    Most recent interaction timestamp for the user.\n3          item  ...               Average rating received by the item.\n4          item  ...   How frequently the item appears in interactions.\n5   interaction  ...  Time gap between current interaction and most ...\n6   interaction  ...    Type of event such as click, view, or purchase.\n\n[7 rows x 3 columns]"
+  }
+}

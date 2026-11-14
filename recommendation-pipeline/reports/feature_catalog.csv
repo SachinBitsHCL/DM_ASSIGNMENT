@@ -1,0 +1,8 @@
+feature_group,feature_name,description
+user,user_average_rating,Average rating given by the user.
+user,user_activity_count,Number of interactions for the user.
+user,last_interaction,Most recent interaction timestamp for the user.
+item,item_average_rating,Average rating received by the item.
+item,item_popularity_count,How frequently the item appears in interactions.
+interaction,days_since_last_interaction,Time gap between current interaction and most recent user event.
+interaction,event_type,"Type of event such as click, view, or purchase."

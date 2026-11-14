@@ -1,0 +1,15 @@
+{
+  "total_users": 120,
+  "total_items": 80,
+  "total_interactions": 5998,
+  "invalid_rows_logged": 2,
+  "errors": [
+    {
+      "dataset": "interactions",
+      "column": "user_id,item_id,timestamp",
+      "reason": "duplicate_rows",
+      "count": 2
+    }
+  ],
+  "status": "warnings_detected"
+}
